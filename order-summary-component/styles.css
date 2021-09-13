@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: hsl(225, 100%, 94%);
+  --secondary-color: hsl(245, 75%, 52%);
+  --neutral-1: hsl(225, 100%, 98%);
+  --neutral-2: hsl(224, 23%, 55%);
+  --neutral-3: hsl(223, 47%, 23%);
+  --font-size: 16px;
+}
+body {
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: repeat-x;
+
+  background-color: var(--primary-color);
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  height: 50%;
+  margin: 7rem 0 10rem 0;
+
+  background-color: #f8f8f8;
+  border-radius: 24px;
+  filter: drop-shadow(20px 5px 10px var(--neutral-2));
+}
+img {
+  width: 100%;
+  border-radius: 24px 24px 0 0;
+  height: 100%;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1rem;
+  margin: 2px;
+}
+.card-header {
+  font-weight: 900;
+  font-size: 36px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.card-para {
+  font-size: var(--font-size);
+  font-weight: 500;
+  color: grey;
+  padding: 0 10em 0 10em;
+  margin: 0 3em 0 3em;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 1.6;
+  text-align: center;
+  text-indent: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.annual-plan {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-between;
+  background-color: var(--neutral-1);
+  margin: 1.2em 5em 1.2em 5em;
+  flex-direction: row;
+  border-radius: 5px;
+  filter: brightness(98%);
+  padding: 1.3em;
+}
+
+.annual_plan-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-direction: column;
+  padding: 0.5em;
+}
+div.annual-plan > div:first-child {
+  background-color: var(--primary-color);
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
+  padding: 0.2em 1em 0.2em 1em;
+  margin: 6px 0 1px 0;
+  color: var(--neutral-3);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+div.annual-plan > div:first-child > i:first-child {
+  font-size: calc(var(--font-size) * 1.5);
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+}
+a.annual_plan-content {
+  cursor: pointer;
+  margin-left: 24px;
+  text-decoration: underline;
+  color: var(--secondary-color);
+  font-weight: 900;
+  align-content: flex-end;
+}
+a:hover {
+  filter: brightness(200%);
+}
+.fa-music {
+  color: var(--neutral-2);
+}
+div.annual_plan-content > span:first-child {
+  color: var(--neutral-3);
+  font-weight: 900;
+  font-size: calc(var(--font-size) * 1.2);
+  padding-top: 0;
+  line-height: 1.6;
+  padding: 0;
+}
+div.annual_plan-content > span:last-child {
+  color: var(--neutral-2);
+  font-weight: 500;
+  font-size: calc(var(--font-size) * 1.2);
+  padding-top: 0;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+  margin: 1.2em 5em 1.2em 5em;
+}
+.buttons > button:first-child {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 20px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  margin: 10px;
+  filter: drop-shadow(0 5px 10px var(--neutral-2));
+  font-size: calc(var(--font-size) * 1.2);
+  font-weight: 700;
+}
+.buttons > button:first-child:hover {
+  filter: brightness(200%);
+}
+.buttons > button:last-child {
+  color: var(--neutral-2);
+  background-color: #f8f8f8;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+  font-size: calc(var(--font-size) * 1.2);
+  font-weight: 700;
+}
+.buttons > button:last-child:hover {
+  color: #252525;
+  font-weight: 900;
+}
+/* media query for screen sizes below 648px */
+
+@media screen and (max-width: 648px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    height: 80%;
+    margin: 7rem 0 10rem 0;
+
+    background-color: #f8f8f8;
+    border-radius: 24px;
+    filter: drop-shadow(20px 5px 10px var(--neutral-2));
+  }
+  .card-header {
+    font-weight: 900;
+    font-size: calc(var(--font-size) * 1.5);
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .card-para {
+    font-size: calc(var(--font-size)-2);
+    font-weight: 500;
+    color: grey;
+    padding: 0 10px 0 15px;
+    margin: 0 2px 2px 2px;
+    word-wrap: break-word;
+    text-align: center;
+    line-height: 1.6;
+    text-indent: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    width: 100%;
+  }
+  .annual-plan {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--neutral-1);
+    padding: 0 2em 0 2em;
+    margin: 0 1em 0 1em;
+    flex-direction: row;
+    border-radius: 5px;
+    filter: brightness(98%);
+    padding: 1.2em;
+    width: 100%;
+  }
+  .annual_plan-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: column;
+    padding: 0.2em;
+    margin-left: 2px;
+  }
+
+  div.annual-plan > div:first-child {
+    background-color: var(--primary-color);
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+    padding: 0.01em 0.4em 0.01em 0.4em;
+    margin: 10px 0 1px 2px;
+    color: var(--neutral-3);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  div.annual-plan > div:first-child > i:first-child {
+    font-size: calc(var(--font-size));
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+  }
+  a.annual_plan-content {
+    margin-left: 24px;
+    text-decoration: underline;
+    color: var(--secondary-color);
+    font-weight: 900;
+    align-content: flex-end;
+    font-size: calc(var(--font-size) * 0.8);
+  }
+  div.annual_plan-content > span:first-child {
+    color: var(--neutral-3);
+    font-weight: 900;
+    font-size: calc(var(--font-size) * 0.8);
+
+    line-height: 1.6;
+    padding: 0.2em;
+  }
+  div.annual_plan-content > span:last-child {
+    color: var(--neutral-2);
+    font-weight: 500;
+    font-size: calc(var(--font-size) * 0.8);
+
+    padding: 0.2em;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: column;
+    margin: 1.2em 0.35em 1.2em 0.5em;
+    width: 100%;
+  }
+  .buttons > button:first-child {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    margin: 2.5px;
+    filter: drop-shadow(0 5px 10px var(--neutral-2));
+    font-size: calc(var(--font-size) * 0.8);
+    font-weight: 700;
+  }
+  .buttons > button:last-child {
+    color: var(--neutral-2);
+    background-color: #f8f8f8;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    font-size: calc(var(--font-size) * 0.8);
+    font-weight: 700;
+  }
+}
